@@ -11,11 +11,11 @@ final readonly class Signature
      * 生成签名
      * @param string $app_key
      * @param string $nonce
-     * @param int $timestamp
+     * @param string $timestamp
      * @param string $secret_or_token
      * @return string
      */
-    public static function build(string $app_key, string $nonce, int $timestamp, string $secret_or_token): string
+    public static function build(string $app_key, string $nonce, string $timestamp, string $secret_or_token): string
     {
         //如何限制参数不能是空串
         if (empty($app_key) || empty($nonce) || empty($timestamp) || empty($secret_or_token)) {
