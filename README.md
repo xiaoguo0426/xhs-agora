@@ -41,3 +41,20 @@ try {
 ```
 
 ### 生成分享签名
+
+```php
+
+
+$app_key = '';
+//$app_secret = '';
+
+$access_token = '';
+
+$nonce = Signature::genRandomStr();
+$timestamp = round(microtime(true) * 1000);
+
+$signature = Signature::build($app_key, $nonce, $timestamp, $access_token);//生成分享签名
+
+var_dump($signature);
+
+```
