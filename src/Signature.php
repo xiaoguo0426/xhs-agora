@@ -2,6 +2,7 @@
 
 namespace Onetech\XhsAgoraSdk;
 
+use InvalidArgumentException;
 use Random\RandomException;
 
 final readonly class Signature
@@ -16,6 +17,11 @@ final readonly class Signature
      */
     public static function build(string $app_key, string $nonce, int $timestamp, string $secret_or_token): string
     {
+        //如何限制参数不能是空串
+        if (empty($app_key) || empty($nonce) || empty($timestamp) || empty($secret_or_token)) {
+            throw new InvalidArgumentException('参数不能为空');
+        }
+
         $params = [
             'appKey' => $app_key,
             'nonce' => $nonce,

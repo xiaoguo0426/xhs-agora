@@ -6,7 +6,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 
 $app_key = '';
-$app_secret = '';
+//$app_secret = '';
 
 $access_token = '';
 
