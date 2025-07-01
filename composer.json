@@ -1,0 +1,14 @@
+{
+  "name": "onetech/xhs-agora-sdk",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Onetech\\XhsAgoraSdk\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.2",
+    "guzzlehttp/guzzle": "^7.0"
+  }
+}
