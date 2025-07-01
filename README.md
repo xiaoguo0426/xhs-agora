@@ -7,7 +7,7 @@
 通过 Composer 安装:
 
 ```bash
-composer require xhs/agora-sdk
+composer require onetech/xhs-agora-sdk
 ```
 
 ## 使用方法
